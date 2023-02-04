@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showGreetings } from '../redux/Message/message';
@@ -8,9 +7,10 @@ const Greetings = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showGreetings());
+    /* eslint-disable */
   }, []);
   return (
-    <div>{loading ? <h1>Loading...</h1> : <h1>{greetings.greeting}</h1>}</div>
+    <h1>{loading ? 'Loading...' : greetings.greeting}</h1>
   );
 };
 

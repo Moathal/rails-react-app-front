@@ -50,6 +50,7 @@ export const showGreetings = () => async (dispatch) => {
       payload: data[0],
     });
   } catch (e) {
+    /* eslint-disable */
     console.log(e.message);
   }
 };
